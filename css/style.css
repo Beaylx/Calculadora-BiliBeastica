@@ -1,43 +1,74 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  height: 100vh;
+  background: #f5f5f5;
+  font-family: sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
-.container {
-  background: #fff;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  width: 90%;
-  max-width: 400px;
+.calculadora {
+  background: #222;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #0005;
+  width: 280px;
 }
 
-button {
-  margin: 20px 0;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
+.visor {
+  background: #000;
+  color: #0f0;
+  font-size: 2rem;
+  padding: 15px;
+  text-align: right;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow-x: auto;
+}
+
+.botoes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  padding: 15px;
+  font-size: 1.2rem;
   border: none;
-  border-radius: 8px;
-  background-color: #007bff;
-  color: white;
-  transition: background-color 0.2s;
+  border-radius: 10px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-button:hover {
-  background-color: #0056b3;
+.btn:hover {
+  background: #444;
 }
 
-#saida {
-  margin-top: 20px;
-  font-size: 1.1rem;
-  color: #333;
-  white-space: pre-wrap;
+.operador {
+  background: #007bff;
+}
+
+.operador:hover {
+  background: #0056b3;
+}
+
+.igual {
+  background: #28a745;
+  grid-column: span 2;
+}
+
+.igual:hover {
+  background: #1e7e34;
+}
+
+.limpar {
+  background: #dc3545;
+  grid-column: span 2;
+}
+
+.limpar:hover {
+  background: #a71d2a;
 }
