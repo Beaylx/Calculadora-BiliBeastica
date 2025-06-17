@@ -1,74 +1,99 @@
 body {
-  background: #f5f5f5;
-  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
-.calculadora {
-  background: #222;
+.calculator {
+  background-color: #282c34;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  width: 320px;
   padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 20px #0005;
-  width: 15vw;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 15px;
 }
 
-.visor {
-  background: #000;
-  color: #0f0;
-  font-size: 2rem;
-  padding: 15px;
+.display {
+  background-color: #1a1e24;
+  color: #e0e0e0;
+  font-size: 2.8em;
+  padding: 20px;
+  border-radius: 8px;
   text-align: right;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  overflow-x: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+  font-family: 'Roboto Mono', monospace;
 }
 
-.botoes {
+.buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
 
-.btn {
-  padding: 15px;
-  font-size: 1.2rem;
+.buttons button {
+  background-color: #3b3e45;
+  color: white;
+  padding: 20px;
+  font-size: 1.5em;
   border: none;
-  border-radius: 10px;
-  background: #333;
-  color: #fff;
+  border-radius: 8px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: background-color 0.2s, transform 0.1s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  outline: none;
 }
 
-.btn:hover {
-  background: #444;
+.buttons button:hover {
+  background-color: #50545c;
+  transform: translateY(-2px);
 }
 
-.operador {
-  background: #007bff;
+.buttons button:active {
+  background-color: #303339;
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.operador:hover {
-  background: #0056b3;
+.buttons button.clear {
+  background-color: #e74c3c;
+}
+.buttons button.clear:hover {
+  background-color: #c0392b;
 }
 
-.igual {
-  background: #28a745;
+.buttons button.operator {
+  background-color: #3498db;
+}
+.buttons button.operator:hover {
+  background-color: #2980b9;
+}
+
+.buttons button.equals {
+  background-color: #27ae60; 
   grid-column: span 4;
 }
 
-.igual:hover {
-  background: #1e7e34;
+.buttons button.equals:hover {
+  background-color: #229954;
 }
 
-.limpar {
-  background: #dc3545;
+.buttons button.backspace {
+  background-color: #3b3e45;
+}
+.buttons button.backspace:hover {
+  background-color: #50545c;
+}
+
+.buttons button.zero {
   grid-column: span 2;
-}
-
-.limpar:hover {
-  background: #a71d2a;
 }
